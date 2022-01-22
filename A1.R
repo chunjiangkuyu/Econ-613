@@ -162,7 +162,7 @@ num_change=function(y){
   for (i in 1:nrow(temp1)){
     id=temp1$idind[i]
     temp2=all_ind%>%filter(idind==id,year==y-1)
-    temp1$bl[i]=!temp1[1,"profession"]==temp2[1,"profession"]|!temp1[1,"empstat"]==temp2[1,"empstat"]
+    temp1$bl[i]=!temp1[i,"profession"]==temp2[1,"profession"]|!temp1[i,"empstat"]==temp2[1,"empstat"]
   }
   temp3=temp1%>%filter(bl==T)
   length(unique(temp3$idmen))
