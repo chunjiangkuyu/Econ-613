@@ -155,7 +155,7 @@ barplot(ind_migrated,names.arg=2004:2019)
 #Mix the two plots you created above in one graph, clearly label the graph. Do you prefer one method over the other? Justify.
 #I prefer the first method, since the other one involves "myear" and "move", which creates inconsistency.
 barplot(rbind(ind_moved,ind_migrated),names.arg=2004:2019,beside=T,xlab="Year",ylab="Migration",legend.text=c("datent","myear/move"),args.legend=list(x="top"))
-#For households who migrate, find out how many households had at least one family member changed his/her profession or employment status: 3369
+#For households who migrate, find out how many households had at least one family member changed his/her profession or employment status: 2543
 migratehh=all%>%filter(year==datent)
 num_change=function(y){
   temp1=migratehh%>%filter(year==y)
