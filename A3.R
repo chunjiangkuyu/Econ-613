@@ -211,3 +211,4 @@ for (i in 1:n){
 }
 mat_prob[mat_prob>0.999999]=0.999999
 mat_prob[mat_prob<0.000001]=0.000001
+#I expect that the relative probabilities of the remaining choices don't change.
