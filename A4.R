@@ -157,6 +157,7 @@ long_pdat$YINC.1700[long_pdat$YINC.1700==0]=NA
 long_pdat=long_pdat%>%mutate(work_exp=(rowSums(long_pdat[10:16],na.rm=T)+rowSums(long_pdat[23:30],na.rm=T))/52)
 #I assume a PhD/professional degree takes five years.
 long_pdat$edu=recode(long_pdat$CV_HIGHEST_DEGREE_EVER_EDT,"0"=0,"1"=12,"2"=12,"3"=14,"4"=16,"5"=18,"6"=21,"7"=21)
+#There was an error, but it worked when I reopened RStudio.
 long_pdat$edu[is.na(long_pdat$edu)]=0
 long_pdat=long_pdat%>%mutate(MARRIED=(CV_MARSTAT_COLLAPSED==1))
 long_pdat=long_pdat%>%mutate(SEPARATED=(CV_MARSTAT_COLLAPSED==2))
